@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba GA4 - NimbusFlow</title>
+
+  <!-- Google Tag Manager -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      tipo_usuario: 'qualified_lead',
+      categoria_producto: 'project_management'
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PLM28LJJ"></script>
+  <!-- Fin Google Tag Manager -->
+
+</head>
+<body>
+  <h1>Prueba de medición NimbusFlow</h1>
+  <p>Página de laboratorio para el Trabajo 8 de Paid Media.</p>
+
+  <button id="registrarme">Registrarme</button>
+
+  <script>
+    document.getElementById('registrarme').addEventListener('click', function () {
+      window.dataLayer.push({
+        event: 'generate_lead',
+        value: 36.00,
+        currency: 'USD',
+        lead_type: 'qualified_lead',
+        tipo_usuario: 'qualified_lead',
+        categoria_producto: 'project_management'
+      });
+      alert('Evento de prueba enviado al Data Layer');
+    });
+  </script>
+</body>
+</html>
